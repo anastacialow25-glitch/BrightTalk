@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BrightTalk-Your Post</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+        <div class="layout">
+
+            <!-- SideBar Navigation -->
+        <nav class="sidebar">
+           <img src="Images/Screenshot 2026-06-15 172137.png" alt="BrightTalk Logo" class="logo-small"> 
+           <a href="home.html">🏠 Home</a>
+           <a href="forum.html">💬 Your Posts</a>
+           <a href="cyberinfo.html">📱Cyberbullying Info</a>
+           <a href="about.html">❓About the Website</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+         <h1>Your Posts</h1>
+
+            <!-- Category Tabs -->
+             <div class="category-tabs">
+                <button class="tab Active">Art</button>
+                <button class="tab">Books</button>
+                <button class="tab">Games</button>
+                <button class="tab">Pets</button>
+                <button class="tab">Kindness Corner</button>
+             </div>
+
+             <!-- Post 1 -->
+             <div class="post">
+                    <div class="post-header">
+                        <img src="Images/PANDA.png" alt="Fluffy Dog" class="post-avatar">
+                        <strong class="post-username">Fluffy Dog</strong>
+                    </div>
+                    <div class="post-body">
+                        <p>Hey, check out my New Masterpiece!</p>
+                        <p>Find the link here <a href="https://www.sketchjoy.com/dandys-world-coloring-pages/" target="_blank">https://www.sketchjoy.com/dandys-world-coloring-pages/</a></p>
+                        <img src="Images/Dandy & Pebble.png" alt="Dandy & Pebble" class="post-image">
+                        <p>Colour your own and share it!</p>
+                    </div>        
+                    <div class="post-footer">
+                        <span class="post-time">Posted June 18th, 2026 at 7:25pm</span>
+                    </div>
+                </div>
+                    <!-- Reply 1 -->
+                    <div class="post reply">
+                        <div class="post-header">
+                            <img src="Images/Banana.png" alt="Banana Muffin" class="post-avatar">
+                            <strong class="post-username">Banana Muffin</strong>
+                        </div>
+                        <div class="post-body">
+                            <p>Nice! Printing mine!</p>
+                        </div>
+                        <div class="post-footer">
+                            <span class="post-time">Posted June 19, 2026 at 4:16pm</span>
+                            <button class="report-btn" onclick="reportPost"(this)>🚩Report</button>
+                        </div> 
+                    </div>
+                    <!-- Reply 2 -->
+                    <div class="post reply">
+                        <div class="post-header">
+                            <img src="Images/BBQ.png" alt="BBQ Queen" class="post-avatar">
+                            <strong class="post-username">BBQ Queen</strong>
+                        </div>
+                        <div class="post-body">
+                            <p>Is that paint? <br> I have to know!</p>
+                        </div>
+                        <div class="post-footer">
+                            <span class="post-time">Posted June 19, 2026 at 5:27pm</span>
+                            <button class="report-btn" onclick="reportPost"(this)>🚩Report</button>
+                        </div>
+                        </div>
+                                
+                    <!-- Comment Form -->
+                    <div class="comment-form">
+                        <h3>Add a kind comment</h3>
+                            <textarea id="comment-input" placeholder="Share something kind or creative..." rows="3"></textarea>
+                                <div class="kindness-prompt" id="kindness-prompt">
+                                <p>Before you post, ask yourself:</p>
+                                <ul>
+                                    <li>✅ Is this <strong>kind</strong>?</li>
+                                    <li>✅ Is this <strong>true</strong>?</li>
+                                    <li>✅ Is this <strong>helpful</strong>?</li>
+                                    </ul>
+                                </div>
+                                <button class="post-btn" onclick="submitComment()">Post Comment 💛</button>
+                    </div>
+        </main>
+
+        <!-- User Avatar (top right) -->
+         <div class="user-avatar">
+            <img src="Images/PANDA.png" alt="User avatar">
+            <p>Fluffy Dog</p>
+         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </body>
+</html>

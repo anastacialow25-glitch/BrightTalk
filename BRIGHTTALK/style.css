@@ -1,0 +1,557 @@
+/* GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@400;700;800&display=swap');
+
+
+/* Color Variations */
+:root{
+    --pink:     #f8a5c2;    
+    --lavender: #ce93d8;
+    --blue:     #98caf9;
+    --white:    #ffffff;
+    --dark:     #1a1a1a;
+    --sidebar:  #ffffffcc;
+    --shadow:   rgba(0,0,0,0.1);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito',sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+        var(--pink)     0%,
+        var(--lavender) 50%,
+        var(--blue)     100%);
+    background-attachment: fixed;
+    color: var(--dark);
+
+}
+
+
+/* LANDING PAGE */
+.landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 24px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.logo-large{
+    width: 280px;
+    border-radius:28px ;
+    box-shadow: 0 8px 32px var(--shadow);
+
+}
+
+.enter-btn{
+    display: inline-block;
+    background: var(--blue);
+    color: var(--white);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 3px solid var(--white);
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 16px var(--shadow);
+
+}
+
+.enter-btn:hover{
+    background: var(--pink);
+    transform: scale(1.05);
+}
+
+
+/* INNER PAGES LAYOUT */
+
+.layout{
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.sidebar{
+    width: 200px;
+    min-height: 100vh;
+    background: var(--sidebar);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 4px;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(255,255,255,0.4);
+}
+
+.logo-small{
+    width: 110px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+}
+ .sidebar a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight:700 ;
+    padding: 10px 12px;
+    border-radius:12px;
+    width: 100%;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+ }
+
+ .sidebar a:hover{
+    background: var(--pink);
+    color: var(--white);
+ }
+
+ /* Main Content */
+
+.content{
+    padding: 36px 32px;
+    flex: 1;
+    min-width: 0;
+}
+
+/* User Avatar (Top Right) */
+.user-avatar{
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    text-align: center;
+}
+
+.user-avatar img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    object-fit: cover;
+}
+
+.user-avatar p{
+    font-size: 12px;
+    font-weight: 700;
+    color:  var(--dark);
+    margin-top: 4px;
+}
+
+/* Typography */
+h1{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 24px 0 12px;
+}
+
+h3{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+a{
+    color: #7b5ea7;
+}
+
+/* HOMEPAGE - COMMUNITY RULES */
+.content.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rules-box{
+    background: var(--white);
+    border-radius: 20px;
+    padding: 28px 40px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 2;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.no-bad{
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--white);
+    text-shadow: 2px 2px 0px var(--lavender);
+    margin-top: 16px;
+    letter-spacing: 1px;
+}
+
+/* FORUM PAGE */
+
+/* CATEGORY TABS */
+.category-tabs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.tab{
+    background: var(--white);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 6px 18px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--dark);
+}
+
+.tab:hover,
+.tab.active {
+    background: var(--pink);
+    color: var(--white);
+    border-color: var(--white);
+}
+
+/* POSTS CARDS*/
+.post{
+    background: var(--white);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 6px;
+    border-left: 4px solid var(--pink);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.post.reply{
+    border-left-color: var(--blue);
+    margin-left: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.post-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--lavender);
+}
+
+.post-username{
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--dark);
+}
+
+.post-body p{
+    margin-bottom: 8px;
+}
+
+.post-image{
+    max-width: 200px;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.post-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.post-time{
+    font-size: 12px;
+    color: #999;
+}
+
+/* Report BTN */
+
+.report-btn{
+    font-size: 12px;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: #888;
+    transition: all 0.2s;
+}
+
+.report-btn:hover{
+    background: #fff0f0;
+    border-color: var(--pink);
+    color: #c0392b;
+}
+
+/* Comment Form */
+.comment-form{
+    background: var(--white);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+
+.comment-form textarea{
+    width: 100%;
+    border:  2px solid #eee;
+    border-radius: 10px;
+    padding: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    margin-bottom: 12px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.comment-form textarea:focus {
+     border-color: var(--lavender);
+}
+
+/* Kindness Prompt */
+.kindness-prompt{
+    background: linear-gradient(135deg, #fff9c4, #ffe0f0);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-left: 4px solid var(--pinkpink);
+    font-size: 14px;
+}
+
+.kindness-prompt p{
+    font-weight: 700;
+    margin-bottom: 6px ;
+    font-size: 14px;
+}
+
+.kindness-prompt ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Post Btn */
+.post-btn{
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 28px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s ;
+}
+
+.post-btn:hover{
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* About Page */
+.about-content{
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.about-content h1, .about-content h2{
+    text-align: left;
+}
+
+.about-content p{
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.creator-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--white);
+    box-shadow: 0 4px 20px var(--shadow);
+    margin-bottom: 20px;
+}
+
+.mission-box{
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    border-radius: 16px;
+    padding: 18px 24px;
+    margin: 20px 0;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.mission-box p{
+    color: var(--white);
+    margin: 0;
+    text-align: center;
+}
+
+.safety-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.safety-list li{
+    background: var(--white);
+    border-radius: 10px;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 2px 6px var(--shadow);
+}
+
+/* Cyber Info Page */
+.info-box{
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.info-box.dark{
+    background: var(--dark);
+    color: var(--white);
+}
+
+.info-box.light{
+    background: var(--white);
+    color: var(--dark);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.info-box.light ul{
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.info-box.light li{
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Types Grid */
+.types-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+
+}
+
+.type-card{
+    background: var(--white);
+    border-radius: 14px;
+    padding: 18px 16px;
+    text-align: center;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.type-icon{
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.type-card h3{
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.type-card p{
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Steps Lists */
+.steps-list{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    gap: 10px;
+}
+
+.steps-item{
+    background: var(--white);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    box-shadow: 0 2px 6px var(--shadow);
+}
+
+.step-number{
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    color: var(--white);
+    font-weight: 800;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.steps-item p{
+    font-size: 14px;
+    line-height: 1.6;
+}
